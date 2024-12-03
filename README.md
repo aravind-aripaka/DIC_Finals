@@ -211,4 +211,173 @@ Data Intensive Computing requires diverse skills:
 
 ---
 
-_End of Notes_
+
+### **Content**  
+- So far:  
+  - Big Data (BD)  
+  - Data Science (DS)  
+  - Profiles, Characteristics  
+  - BD Pipeline  
+- Statistical Inference  
+- Exploratory Data Analysis (EDA)  
+
+---
+
+## **Statistical Inference**  
+
+### **Key Concepts**:  
+1. **Randomness and Uncertainty**:  
+   - Simplify large data (Excel sheets, databases) into concise, comprehensible forms.  
+
+2. **Population vs Sample**:  
+   - Statistical estimators help extract meaning and insights from data.  
+
+---
+
+## **Data Strategy: Steps to Consider**
+1. **Frame the Problem**:  
+   - Define the use case clearly.  
+
+2. **Understand the Data**:  
+   - Perform EDA to identify patterns and characteristics.  
+
+3. **Extract Features**:  
+   - Determine important data points based on the problem.  
+
+4. **Model the Data**:  
+   - Analyze data to extract insights and relationships.  
+
+5. **Design, Code, and Experiment**:  
+   - Use tools for data cleaning, extraction, plotting, and analysis.  
+
+6. **Present and Test Results**:  
+   - Create effective visuals and interactive elements for human and system stakeholders.  
+
+7. **Iterate**:  
+   - Refine based on feedback and new insights.  
+
+---
+
+### **Example (Data Science from Scratch, Ch. 5)**  
+- Divide data scientists into bins based on their location (e.g., East Coast vs West Coast).  
+- Find the average number of friends per bin.  
+
+---
+
+## **Extracting Features**  
+
+### **Steps**:  
+1. **Clean Data** → **Perform EDA** → **Extract Features**.  
+2. Filter only important fields (e.g., `json` data).  
+
+### **Example**:  
+- For a tweet: Only **location** and **temperature** may be relevant.  
+- Use case defines what fields to extract (e.g., age, gender).  
+
+---
+
+## **Modeling**  
+
+### **What is a Model?**  
+- An abstraction, structure, or equation to represent data relationships.  
+- **Example**: Linear model: \( y = \beta_1 + \beta_2x \).  
+
+### **Building Models**:  
+1. Start with EDA.  
+2. Use visualizations (histograms, scatter plots) to identify relationships.  
+3. Gradually refine models from simple to complex.  
+
+---
+
+### **Probability Distributions**:  
+- **Examples**:  
+  - Normal, Uniform, Cauchy, Chi-square, Exponential, Weibull, Lognormal.  
+
+#### **Key Properties**:  
+1. Continuous density functions map \( p(x) \) to a positive real number.  
+2. Integrating \( p(x) = 1 \).  
+3. **Joint Distributions**: \( p(x, y) \) models the probability of \( x \) and \( y \) occurring.  
+4. **Conditional Distributions**: \( p(x|y) \) models \( x \) given \( y \).  
+
+---
+
+### **Fitting a Model**:  
+1. Estimate parameters from observed data.  
+2. Use optimization algorithms like Maximum Likelihood Estimation (MLE).  
+3. Avoid **overfitting** and **underfitting**.  
+
+---
+
+## **Design, Code, Deploy**  
+
+### **Principles**:  
+1. Design before coding.  
+2. Follow software engineering best practices.  
+3. Document the process inside and outside the code.  
+
+---
+
+## **Present the Results**  
+
+### **Visualization Tools**:  
+- [d3.js](https://d3js.org/)  
+- [Tableau](https://www.tableau.com/academic)  
+- Python libraries (e.g., Matplotlib, Seaborn).  
+
+### **Best Practices**:  
+1. Annotate graphs and visuals effectively.  
+2. Provide interactive plots for deeper insights.  
+3. Creativity is key—tailor visuals to the audience.  
+
+---
+
+## **ITERATE!**  
+- Refine every step based on feedback and insights.  
+- Data science is an **iterative process**.  
+
+---
+
+## **EDA & Data Cleaning**
+
+### **EDA (Exploratory Data Analysis)**  
+
+#### **Steps**:  
+1. Analyze distributions, time-series, and relationships.  
+2. Plot histograms and compute summary statistics (mean, min, max, quartiles).  
+3. Identify and handle outliers.  
+
+#### **Goals**:  
+- Gain intuition about data.  
+- Check sanity of scales and formats.  
+- Fix missing or erroneous data.  
+
+---
+
+### **Data Cleaning and Munging**  
+
+#### **Challenges**:  
+- Real-world data is often dirty:  
+  - Missing or incomplete.  
+  - Contains errors.  
+  - Improperly formatted.  
+
+#### **Steps**:  
+1. Clean up formatting.  
+2. Remove nonsensical entries (e.g., $0 sale prices).  
+3. Extract relevant columns.  
+
+---
+
+### **Using Pandas for Cleaning and Munging**  
+
+#### **Key Features**:  
+1. Stores structured data in a `DataFrame`.  
+2. Reads data from common formats (e.g., `csv`).  
+3. Provides powerful operations for filtering, combining, and exploring data.  
+4. Integrated with Matplotlib for quick plotting.  
+
+---
+
+### **End Notes**
+- Embrace iteration.  
+- Data analysis is an evolving process.
