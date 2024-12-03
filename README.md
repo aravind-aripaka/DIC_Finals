@@ -381,3 +381,153 @@ Data Intensive Computing requires diverse skills:
 ### **End Notes**
 - Embrace iteration.  
 - Data analysis is an evolving process.
+
+## Lecture 6: **Modeling**  
+### Dr. Naeem Maroof  
+**Fall 2024**
+
+---
+
+## **Content**
+1. Exploratory Data Analysis (EDA)  
+2. Modeling  
+
+---
+
+## **EDA**
+### **Key Steps**:
+1. **Formatting**:  
+   - Collect, clean, remove, fill missing values, identify outliers, iterate.  
+
+2. **Summarize**:  
+   - Compute stats, plot histograms, examine correlations.  
+   - Develop intuition about the data.  
+
+---
+
+## **Modeling**  
+
+### **Purpose**:  
+- Start deriving useful information from the data.  
+
+### **Two Types of Algorithms/Models**:  
+1. **Optimization for Parameter Estimation**:  
+   - Estimate parameters of the process generating the data.  
+   - Use resulting functions to predict new outcomes.  
+   - Quantify uncertainty and assess the quality of predictions.  
+   - **Examples**:  
+     - Least Squares  
+     - Newton's Methods  
+     - Stochastic Gradient Descent  
+
+2. **Machine Learning Algorithms**:  
+   - Predict, classify, and cluster.  
+   - Typically do not measure uncertainty but focus on accuracy.  
+   - Basis for AI.  
+
+---
+
+### **Models vs Algorithms**
+- **Models**:  
+  - Rooted in mathematics and statistics.  
+  - Equations that attempt to model the underlying process.  
+  - Capture uncertainty.  
+
+- **Algorithms**:  
+  - Rooted in computer science and machine learning.  
+  - Steps designed to achieve accurate predictions.  
+  - Often ignore the underlying process.  
+
+---
+
+## **Linear Regression**
+- **Definition**: A simple relationship between two (or more) variables.  
+  \( y \) (dependent variable) is **linearly** related to \( x \) (independent variable).  
+  - **Equation**: \( y = \beta_0 + \beta_1x \).  
+
+- **Why Linear Regression?**  
+  - Linear relationships are often a good starting point.  
+  - Even if the relationship isn't linear, linear regression can provide insights.  
+
+---
+
+### **Examples**
+1. **Subscriber Revenue**:  
+   - Monthly revenue (\( y \)) and subscriber count (\( x \)):  
+     - \( y = 25x \) (subscription price).  
+
+2. **Friends vs Time Spent**:  
+   - Data: Time spent on a social media site vs new friends added.  
+   - Observations:  
+     - A generally linear relationship exists.  
+     - **Goal**: Capture both **trend** and **variation**.  
+
+---
+
+### **Fitting a Model**  
+- **Objective**: Find values for \( \beta_0 \) and \( \beta_1 \) that minimize the error.  
+- **Method**:  
+  - Minimize the sum of squared vertical distances between points and the line:  
+    \[
+    \text{Minimize: } \sum (y_i - (\beta_0 + \beta_1x_i))^2.
+    \]  
+  - This is known as **least squares estimation**.  
+
+---
+
+### **Adding Variability**  
+- **Reality**: Data has variability.  
+- Add an error term \( \epsilon \):  
+  \[
+  y = \beta_0 + \beta_1x + \epsilon
+  \]  
+  - **Noise (\( \epsilon \))**: Represents unexplained variation.  
+  - Assumption: \( \epsilon \sim N(0, \sigma^2) \).  
+
+- **Probability Distribution**:  
+  \[
+  p(y|x) \sim N(\beta_0 + \beta_1x, \sigma^2)
+  \]  
+  - \( \sigma^2 \): Mean squared error of the residuals.  
+
+---
+
+### **Evaluating the Model**
+- **Key Metrics**:  
+  1. \( R^2 \): Proportion of variance explained by the model.  
+     - High \( R^2 \) = better fit.  
+  2. **p-values**: Test the significance of coefficients.  
+     - Low p-values = significant predictors.  
+  3. **Cross-Validation**:  
+     - Split data into training and test sets.  
+     - Fit the model on training data, compute errors on test data, and check consistency.  
+
+---
+
+### **Extending the Model**  
+1. **Add Predictors**:  
+   - Extend to multiple regression:  
+     \[
+     y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \dots + \epsilon
+     \]  
+
+2. **Transform Predictors**:  
+   - Consider non-linear relationships:  
+     \[
+     y = \beta_0 + \beta_1x + \beta_2x^2 + \dots
+     \]  
+   - Reframe \( x^2 \) as \( z \): Perform linear regression on \( z \).  
+
+---
+
+## **Practical Implementation**
+- Python libraries like `scikit-learn` provide tools for regression.  
+- Evaluate models using metrics such as mean squared error, \( R^2 \), and p-values.  
+- Cross-validation ensures generalizability of the model.
+
+--- 
+
+**End Notes**  
+- Start simple, iterate, and build upon the initial model.  
+- Validate models rigorously with appropriate evaluation metrics.  
+- Adapt and refine based on insights and new predictors.  
