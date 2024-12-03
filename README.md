@@ -382,8 +382,10 @@ Data Intensive Computing requires diverse skills:
 - Embrace iteration.  
 - Data analysis is an evolving process.
 
+
+# Data Intensive Computing (DIC) Finals
+
 ## Lecture 6: **Modeling**  
-### Dr. Naeem Maroof  
 **Fall 2024**
 
 ---
@@ -443,7 +445,10 @@ Data Intensive Computing requires diverse skills:
 ## **Linear Regression**
 - **Definition**: A simple relationship between two (or more) variables.  
   \( y \) (dependent variable) is **linearly** related to \( x \) (independent variable).  
-  - **Equation**: \( y = \beta_0 + \beta_1x \).  
+  - **Equation**:  
+    \[
+    y = \beta_0 + \beta_1x
+    \]  
 
 - **Why Linear Regression?**  
   - Linear relationships are often a good starting point.  
@@ -454,7 +459,10 @@ Data Intensive Computing requires diverse skills:
 ### **Examples**
 1. **Subscriber Revenue**:  
    - Monthly revenue (\( y \)) and subscriber count (\( x \)):  
-     - \( y = 25x \) (subscription price).  
+     - \[
+     y = 25x
+     \]  
+     (subscription price).  
 
 2. **Friends vs Time Spent**:  
    - Data: Time spent on a social media site vs new friends added.  
@@ -469,7 +477,7 @@ Data Intensive Computing requires diverse skills:
 - **Method**:  
   - Minimize the sum of squared vertical distances between points and the line:  
     \[
-    \text{Minimize: } \sum (y_i - (\beta_0 + \beta_1x_i))^2.
+    \text{Minimize: } \sum (y_i - (\beta_0 + \beta_1x_i))^2
     \]  
   - This is known as **least squares estimation**.  
 
@@ -482,7 +490,10 @@ Data Intensive Computing requires diverse skills:
   y = \beta_0 + \beta_1x + \epsilon
   \]  
   - **Noise (\( \epsilon \))**: Represents unexplained variation.  
-  - Assumption: \( \epsilon \sim N(0, \sigma^2) \).  
+  - Assumption:  
+    \[
+    \epsilon \sim N(0, \sigma^2)
+    \]  
 
 - **Probability Distribution**:  
   \[
@@ -531,3 +542,4 @@ Data Intensive Computing requires diverse skills:
 - Start simple, iterate, and build upon the initial model.  
 - Validate models rigorously with appropriate evaluation metrics.  
 - Adapt and refine based on insights and new predictors.  
+
